@@ -1,5 +1,6 @@
 package zmqtest
 
+import java.nio.charset.Charset
 import org.zeromq.ZMQ
 
 /**
@@ -10,9 +11,10 @@ object Subscriber {
     val ctx = ZMQ.context(1)
     val subscriber = ctx.socket(ZMQ.SUB)
     subscriber.connect("tcp://localhost:9000")
-    subscriber.subscribe("".getBytes())
+    // Important. Set the subscribe filter.
+    subscriber.subscribe(Array.empty)
     0 until 100 foreach { ii =>
-      val str = subscriber.recvStr(0).trim()
+      val str = subscriber.recvStr(Charset.forName("UTF-8")).trim()
       println(str)
     }
     subscriber.close()
