@@ -9,18 +9,11 @@
 /* Begin PBXBuildFile section */
 		2F1A4BC51B9CA86C00BEA310 /* subscriber.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F1A4BC41B9CA86C00BEA310 /* subscriber.c */; };
 		2F1A4BC71B9CA8A800BEA310 /* publisher.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F1A4BC61B9CA8A800BEA310 /* publisher.c */; };
+		2F80AEC51B9CB5B00088E85A /* libzmq.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4BF4511B9C07C000B8F3B5 /* libzmq.dylib */; };
+		2F80AEC61B9CB5B80088E85A /* libzmq.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4BF4511B9C07C000B8F3B5 /* libzmq.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2F4BF4411B9C03A600B8F3B5 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		2F4BF4571B9C08A000B8F3B5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,24 +37,17 @@
 /* Begin PBXFileReference section */
 		2F1A4BC41B9CA86C00BEA310 /* subscriber.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = subscriber.c; path = ZeromqTest/subscriber.c; sourceTree = SOURCE_ROOT; };
 		2F1A4BC61B9CA8A800BEA310 /* publisher.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = publisher.c; path = ZeromqTest/publisher.c; sourceTree = SOURCE_ROOT; };
-		2F4BF4431B9C03A600B8F3B5 /* ZeromqTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ZeromqTest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F4BF4511B9C07C000B8F3B5 /* libzmq.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libzmq.dylib; path = ../../../../usr/local/lib/libzmq.dylib; sourceTree = "<group>"; };
+		2F4BF4511B9C07C000B8F3B5 /* libzmq.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libzmq.dylib; path = /usr/local/lib/libzmq.dylib; sourceTree = "<absolute>"; };
 		2F4BF4591B9C08A000B8F3B5 /* Subscriber */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Subscriber; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4BF4641B9C08E400B8F3B5 /* Publisher */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Publisher; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2F4BF4401B9C03A600B8F3B5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2F4BF4561B9C08A000B8F3B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F80AEC51B9CB5B00088E85A /* libzmq.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F80AEC61B9CB5B80088E85A /* libzmq.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +75,6 @@
 		2F4BF4441B9C03A600B8F3B5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2F4BF4431B9C03A600B8F3B5 /* ZeromqTest */,
 				2F4BF4591B9C08A000B8F3B5 /* Subscriber */,
 				2F4BF4641B9C08E400B8F3B5 /* Publisher */,
 			);
@@ -114,23 +100,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2F4BF4421B9C03A600B8F3B5 /* ZeromqTest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2F4BF44A1B9C03A600B8F3B5 /* Build configuration list for PBXNativeTarget "ZeromqTest" */;
-			buildPhases = (
-				2F4BF43F1B9C03A600B8F3B5 /* Sources */,
-				2F4BF4401B9C03A600B8F3B5 /* Frameworks */,
-				2F4BF4411B9C03A600B8F3B5 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ZeromqTest;
-			productName = ZeromqTest;
-			productReference = 2F4BF4431B9C03A600B8F3B5 /* ZeromqTest */;
-			productType = "com.apple.product-type.tool";
-		};
 		2F4BF4581B9C08A000B8F3B5 /* Subscriber */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F4BF45D1B9C08A000B8F3B5 /* Build configuration list for PBXNativeTarget "Subscriber" */;
@@ -174,9 +143,6 @@
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Brian Refsdal";
 				TargetAttributes = {
-					2F4BF4421B9C03A600B8F3B5 = {
-						CreatedOnToolsVersion = 6.4;
-					};
 					2F4BF4581B9C08A000B8F3B5 = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -197,7 +163,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2F4BF4421B9C03A600B8F3B5 /* ZeromqTest */,
 				2F4BF4581B9C08A000B8F3B5 /* Subscriber */,
 				2F4BF4631B9C08E400B8F3B5 /* Publisher */,
 			);
@@ -205,13 +170,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2F4BF43F1B9C03A600B8F3B5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2F4BF4551B9C08A000B8F3B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,29 +270,10 @@
 			};
 			name = Release;
 		};
-		2F4BF44B1B9C03A600B8F3B5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = /usr/local/include;
-				"USER_HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
-			};
-			name = Debug;
-		};
-		2F4BF44C1B9C03A600B8F3B5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = /usr/local/include;
-			};
-			name = Release;
-		};
 		2F4BF45E1B9C08A000B8F3B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -347,7 +286,7 @@
 		2F4BF45F1B9C08A000B8F3B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
 			};
@@ -381,15 +320,6 @@
 			buildConfigurations = (
 				2F4BF4481B9C03A600B8F3B5 /* Debug */,
 				2F4BF4491B9C03A600B8F3B5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2F4BF44A1B9C03A600B8F3B5 /* Build configuration list for PBXNativeTarget "ZeromqTest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2F4BF44B1B9C03A600B8F3B5 /* Debug */,
-				2F4BF44C1B9C03A600B8F3B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
